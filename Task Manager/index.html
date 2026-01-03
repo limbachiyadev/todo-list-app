@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your day efficiently</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Enter a new task...">
+                <button id="add-btn" class="btn primary-btn">
+                    <i class='bx bx-plus'></i> Add
+                </button>
+            </div>
+            <div class="file-actions">
+                <button id="save-btn" class="btn secondary-btn" title="Save tasks to file">
+                    <i class='bx bx-save'></i> Save
+                </button>
+                <button id="load-btn-trigger" class="btn secondary-btn" title="Load tasks from file">
+                    <i class='bx bx-upload'></i> Load
+                </button>
+                <!-- Hidden file input -->
+                <input type="file" id="file-input" accept=".json" style="display: none;">
+            </div>
+        </div>
+
+        <ul id="task-list" class="task-list">
+            <!-- Tasks will be added here -->
+        </ul>
+
+        <div id="empty-state" class="empty-state">
+            <p>No tasks yet. Add one to get started!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
